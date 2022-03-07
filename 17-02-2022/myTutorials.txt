@@ -1,0 +1,15 @@
+[
+{
+"display": "Hotstar",
+"url": "https://www.hotstar.com/in"
+},
+{
+"display": "Netflix",
+"url": "https://www.netflix.com/in/"
+},
+{
+"display": "Amazon prime",
+"url": "https://www.primevideo.com/"
+}
+
+]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const object1 = {  
+  a: 1,  
+  b: 2,  
+  c: 3  
+};  
+const object3= {  
+  g: 1,  
+  h: 2,  
+  i: 3  
+};    
+  
+const object2 = Object.assign({c: 4, d: 5}, object1);  
+const object4 = Object.assign({g: 34, h: 25}, object3);  
+document.write(object2.c, object2.d);  
+document.write(object4.g, object4.h); 
+</script>
+</body>
+</html>

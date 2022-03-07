@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assigment</title>
+<style>
+button{
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: #5372F0;
+  padding: 18px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 250;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<h2>Assigments Testing</h2>
+
+
+
+<button type="button" onclick="loadDoc()">Assigment-1</button>
+<button type="button" onclick="loadDoc1()">Assigment-2</button>
+<button type="button" onclick="loadDoc2()">Assigment-3</button>
+<button type="button" onclick="loadDoc3()">Assigment-4</button>
+<br><br><br><br><br><br>
+<p id="demo"></p>
+<script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+
+      }
+      
+      xhttp.open("GET", "1.html");
+      xhttp.send();
+      
+    }
+    function loadDoc1() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+      }
+      xhttp.open("GET", "2.html");
+      xhttp.send();
+    }
+    function loadDoc2() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+      }
+      xhttp.open("GET", "3.html");
+      xhttp.send();
+    }
+    function loadDoc3() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+      }
+      xhttp.open("GET", "index.html");
+      xhttp.send();
+    }
+    </script>
+</body>
+</html>
+
+

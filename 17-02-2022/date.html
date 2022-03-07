@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dates</title>
+  </head>
+  <body>
+    <script>
+     
+      const d = new Date();
+      document.writeln(d);
+      document.write("<br>");
+      document.writeln(d.getFullYear());
+      document.write("<br>");
+      document.writeln(d.getMonth());
+      document.write("<br>");
+      document.writeln(d.getDate());
+      document.write("<br>");
+      document.writeln(d.getHours());
+      document.write("<br>");
+      document.writeln(d.getMinutes());
+      document.write("<br>");
+      document.writeln(d.getSeconds());
+      document.write("<br>");
+
+      const d7 = new Date(2000, 3, 6, 4, 2, 1);
+      document.writeln(d7);
+      document.write("<br>");
+    
+      const stringDate = new Date("mar 16 ,2023 12:23:00");
+      document.writeln(stringDate);
+      document.write("<br>");
+   
+      const parseDate = Date.parse("mar 03 2023");
+      document.writeln(parseDate);
+      document.write("<br>");
+
+      document.writeln(d.setFullYear(2000), d);
+      document.write("<br>");
+      document.writeln(d.setMonth(0), d);
+      document.write("<br>");
+      document.writeln(d.setDate(24), d);
+      document.write("<br>");
+      document.writeln(d.setHours(23), d);
+      document.write("<br>");
+      document.writeln(d.setMinutes(60), d);
+      document.write("<br>");
+      document.writeln(d.setSeconds(0), d);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<h1>2.html</h1>
+<body style="background-image: url('22957875.jpg');">
+  
+<script type="text/javascript">
+  
+	  document.write("<p style='color:rgb(43, 255, 0);' > first name:"+" "+localStorage.getItem("fname") + "</p>"); 
+    document.write("<p style='color:rgb(43, 255, 0);' > last name:"+" "+ localStorage.getItem("lname")+ "</p>"); 
+    document.write("<p style='color:rgb(43, 255, 0);' > Address:"+" "+localStorage.getItem("add")+ "</p>"); 
+    document.write("<br>");
+   
+
+   
+ 
+    
+</script>
+<center>
+
+
+  <video width="480" height="480" controls>
+    <source id="myVideo" type="video/mp4">
+    
+  Your browser does not support the video tag.
+  </video><br><br>  
+  
+ 
+                                                            
+<button onclick="getLocation()">Try It</button>
+
+	</head>	
+	<body>		
+	
+<p id="demo"></p>
+
+  <script>
+    var fullPath = localStorage.getItem('myVideo');
+    if (fullPath) {
+    var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+    var filename = fullPath.substring(startIndex);
+    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+    }    
+    }
+    var video = document.getElementById("myVideo")
+    video.src= filename;
+    console.log(video.src)
+    
+
+
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+
+      var latitude = position.coords.latitude; 
+			var longitude = position.coords.longitude; 
+			fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=a5a38619c42b48ec98a5d6cb582e5065`)
+      .then(response => response.json()).then(response =>{
+        let allDetails = response.results[0].components;
+        console.table(allDetails);
+        let {county, postcode, country} = allDetails;
+        x.innerHTML = "<h1>"+   `${county} ${postcode}, ${country}`+"</h1>";
+    }).catch(()=>{
+        x.innerHTML = "<h1>Something went wrong</h1>";
+    });
+      x.innerHTML = "<h3>Latitude:" + latitude+"</h3> " +
+      "<br><h3>Longitude: " + longitude+"</h3>";
+      var myLatLng = {lat: latitude, lng: longitude};
+			
+			map = new google.maps.Map(document.getElementById('map'), {
+			  center: myLatLng,
+			  zoom: 20
+      					
+			}
+      );
+    }
+
+    window.onload= function(){
+        const video= document.getElementById("myVideo");
+        const queryString =window.location.search;
+    }
+  		
+
+
+
+    </script>
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap"></script>
+
+<style>
+button{
+  border: none;
+  outline: none;
+  font-size: 25px;
+  color: #5372F0;
+  padding: 18px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 250;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+
+</style>
+</center>
+<script>
+
+
+var n = localStorage.getItem("Number");
+    document.write("<h1>Multiplication Table of"+n +" </h1>")
+    let i = 0;
+    while (i < 10) {
+
+        document.write("<h3 style='color:rgb(255, 0, 102);' >"+n,"*",i+1,"=",n*(i+1)+"</h3>");
+        i++;
+    }
+    
+</script>
+
+</body>
+</html>

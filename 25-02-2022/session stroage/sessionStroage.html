@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>1.html</h1>
+    
+    </head>
+
+<body style="background-image: url('—Pngtree—hd brick wall background_206286.jpg');">
+<form action=" sessionStorage1.html">
+    <center>
+<h3 style="color:rgb(43, 255, 0);">First Name:</h3>  <input type="text" id="fname"/></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Last Name:</h3>  <input type="text" id="lname"/></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Addresss:</h3>  <textarea rows="2" cols="20" id="add"></textarea></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Select Video:</h3>
+<input type="file" id="myVideo" name="filename1"></br></br>
+<h3 style="color:rgb(43, 255, 0);">Enter a Number:</h3>  <input type="int" id="Number"/></br></br>
+
+<input style="color:rgb(255, 0, 221); " type="submit" value="Submit" onclick="move()">
+
+</form>
+<script>
+    function move()
+    {
+         if(typeof(Storage)!=="undefined") 
+         {
+              sessionStorage.setItem("fname",document.getElementById('fname').value);
+              sessionStorage.setItem("lname",document.getElementById('lname').value);
+              sessionStorage.setItem("add",document.getElementById('add').value);
+              sessionStorage.setItem("myVideo",document.getElementById('myVideo').value);
+              sessionStorage.setItem("Number",document.getElementById('Number').value);
+            
+              window.location.href="sessionStorage1.html";
+        }
+         else 
+         {
+             alert("Sorry! ")
+         }
+    
+    }
+    
+    </script>
+     </center>
+   
+     </body>
+    </html>

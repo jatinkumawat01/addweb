@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>1.html</h1>
+    
+    </head>
+
+<body style="background-image: url('—Pngtree—hd brick wall background_206286.jpg');">
+<form action=" 2.html">
+    <center>
+<h3 style="color:rgb(43, 255, 0);">First Name:</h3>  <input type="text" id="fname"/></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Last Name:</h3>  <input type="text" id="lname"/></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Addresss:</h3>  <textarea rows="2" cols="20" id="add"></textarea></br></br>
+<h3 style="color:rgb(43, 255, 0);"> Select Video:</h3>
+<input type="file" id="myVideo" name="filename1"></br></br>
+<h3 style="color:rgb(43, 255, 0);">Enter a Number:</h3>  <input type="int" id="Number"/></br></br>
+
+<input style="color:rgb(255, 0, 221); " type="submit" value="Submit" onclick="move()">
+
+</form>
+<script>
+    function move()
+    {
+         if(typeof(Storage)!=="undefined") 
+         {
+              localStorage.setItem("fname",document.getElementById('fname').value);
+              localStorage.setItem("lname",document.getElementById('lname').value);
+              localStorage.setItem("add",document.getElementById('add').value);
+              localStorage.setItem("myVideo",document.getElementById('myVideo').value);
+              localStorage.setItem("Number",document.getElementById('Number').value);
+            
+              window.location.href="2.html";
+        }
+         else 
+         {
+             alert("Sorry! ")
+         }
+    
+    }
+    
+    </script>
+     </center>
+
+<p style="color:rgb(43, 255, 0);">
+    Simply put, a paragraph is a collection of sentences all related to a central topic, idea, or <br>
+    Paragraphs act as structural tools for writers to organize their thoughts into an ideal progression, <br>
+    and they also help readers process those thoughts effortlessly. Imagine how much harder reading and <br> <span id="dots">...</span><span id="more">
+    writing would be if everything was just one long block of text. <br><br>
+
+    There’s a lot of flexibility when it comes to writing paragraphs, but if there’s one steadfast rule, <br>
+    it’s this: Paragraphs should relate to one main topic or point. The paragraph itself often contains <br>
+    multiple points spanning several sentences, but they should all revolve around one core theme. Just <br>
+    as sentences build upon each other to communicate the paragraph’s core theme, paragraphs work together <br>
+    to communicate the core theme of the writing as a whole. <br><br>
+    
+    That’s the basic idea, but in practice there’s more to it. Let’s look at the four main types of paragraphs <br>
+    to learn how and when to use them. <br></span>
+    
+    </p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+   
+     </body>
+    </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OddEvenZero</title>
+</head>
+<body>
+    <h3 >Enter a Number:</h3>  <input type="int" id="number"/></br></br>  
+    <input type="submit" value="Submit" onclick="oddeven()">
+
+    <script>
+
+        function oddeven(){
+            var n;
+            n=document.getElementById("number").value;
+            if (n%2!=0){
+                window.alert("Number is odd");
+            }
+            
+            else {
+                window.alert("Number is even");
+            }
+        }
+    </script>
+    <style>
+
+h3{
+    color:rgb(43, 255, 0);
+}
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const object1 = {  
+            property1: 42  
+        }  
+        const object2 = {  
+            property2: 34  
+        }  
+        const descriptor1 = Object.getOwnPropertyDescriptor(object1, 'property1');  
+        const descriptor2 = Object.getOwnPropertyDescriptor(object2, 'property2');  
+        document.write(descriptor1.enumerable);  
+        document.write(descriptor2.enumerable);  
+        document.write(descriptor1.value);  
+        document.write(descriptor2.value);  
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web sql</title>
+    <script>
+
+        var db = openDatabase('mysd','1.0','Test db',2*1024*1024);
+        var msg;
+        db.transaction(function (tx) { 
+            tx.executeSql('CREATE TABLE IF NOT EXISTS Addewb (id unique, name)'); 
+            tx.executeSql('INSERT INTO Addweb (id, name) VALUES (1, "jk")'); 
+            tx.executeSql('INSERT INTO Addweb (id, name) VALUES (2, "st")'); 
+            msg = '<p>Log message created and row inserted.</p>'; 
+            document.querySelector('#status').innerHTML =  msg; 
+         })
+         db.transaction(function (tx) { 
+            tx.executeSql('SELECT * FROM Addweb', [], function (tx, results) { 
+               var len = results.rows.length, i; 
+               msg = "<p>Found rows: " + len + "</p>"; 
+               document.querySelector('#status').innerHTML +=  msg; 
+      
+               for (i = 0; i < len; i++) { 
+                  msg = "<p><b>" + results.rows.item(i).name + "</b></p>"; 
+                  document.querySelector('#status').innerHTML +=  msg; 
+               } 
+            }, null); 
+
+
+        });
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div id ='status' name="status">Status message</div>
+</body>
+</html>

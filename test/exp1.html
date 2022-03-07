@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="color:rgb(43, 255, 0);">Enter a Number:</h3>  <input type="int" id="number"/></br></br>
+    <input style="color:rgb(255, 0, 221); " type="submit" value="Submit" onclick="table()">
+    <script >
+    function table(){
+        var n = document.getElementById("number").value
+        document.write("<h1>Multiplication Table of"+n +" </h1>")
+        let i = 0;
+        while (i < 10) {
+
+            document.write("<h3 style='color:rgb(255, 0, 102);' >"+n,"*",i+1,"=",n*(i+1)+"</h3>");
+            i++;
+        }
+        
+    }
+</script>
+</body>
+</html>

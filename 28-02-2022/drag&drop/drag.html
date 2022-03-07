@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body{
+  background-color: rgb(161, 54, 54);
+}
+#div1 {
+  background-color: aqua;
+  width: 650px;
+  height: 250px;
+  padding: 5px;
+  border: 3px solid #28e20f;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the jatin kumawat image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> 
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="Thank.png" draggable="true" ondragstart="drag(event)" width="536" height="200">
+<br><br>
+<br>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+</html>
+

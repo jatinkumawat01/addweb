@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The adoptNode() Method</h2>
+
+<iframe id="myFrame" src="1.html" style="height:380px;width:520px;"></iframe>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  const frame = document.getElementById("myFrame");
+  const h1 = frame.contentWindow.document.getElementsByTagName("H1")[0];
+  const node = document.adoptNode(h1);
+  document.body.appendChild(node);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>larger</title>
+</head>
+<body>
+    <h3 >Enter 1st Number:</h3>  <input type="int" id="number"/></br></br>  
+    <h3>Enter 2nd Number:</h3>  <input type="int" id="number1"/></br></br>
+    <input type="submit" value="Submit" onclick="larger()">
+
+    <script>
+
+        function larger(){
+            var a,b;
+            a=document.getElementById("number").value;
+            b=document.getElementById("number1").value;
+            if (a==b){
+                document.write("<h1>both are same</h1><br>");
+            }
+            else if (a>b){
+                document.write("<h1>1st no is larger</h1><br>");
+            }
+            else {
+                document.write("<h1>2nd is grater</h1><br>")
+            }
+        }
+    </script>
+    <style>
+
+h3{
+    color:rgb(43, 255, 0);
+}
+h1{
+    color:rgb(17, 19, 16);
+}
+    </style>
+</body>
+</html>

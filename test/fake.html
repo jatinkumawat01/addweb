@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:rgb(116, 231, 233);">
+<form action="fake1.html">
+    select video:
+<input type="file" id="myVideo" name="filename1"></br></br>
+
+<input  type="submit" value="Play it" onclick="move()">
+
+</form>
+<script>
+    function move()
+    {
+        if(typeof(Storage)!=="undefined") 
+        {
+              
+            localStorage.setItem("myVideo",document.getElementById('myVideo').value);
+            
+            window.location.href="fake1.html";
+        }
+        else 
+        {
+            alert("Sorry! ")
+        }
+    
+    }   
+</script>
+</body>
+</html>

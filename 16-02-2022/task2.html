@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seconds</title>
+</head>
+<body>
+    <script>
+            var hr, min;
+            var sec = parseInt(prompt("enter seconds "));
+            hr= parseInt(sec/3600)
+            sec = sec%3600;
+
+            min= parseInt(sec/60);
+            sec = sec%60;
+
+            document.write("Hours : ",hr,"Minutes: ",min,"Seconds: ",sec,'<br>');
+           
+    </script>
+</body>
+</html>

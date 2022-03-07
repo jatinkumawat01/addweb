@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canva" width="600" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="canv" width="600" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+    var canvas = document.getElementById("canva");
+    var canvas1 = document.getElementById("canv");
+    var can = canvas.getContext("2d");
+    var can1 = canvas1.getContext("2d");
+    can.strokeRect(10,10,30,20);
+    can.scale(2.5,2.5);
+    can.strokeRect(10,10,30,20);
+    can.scale(2.5,2.5);
+    can.strokeRect(10,10,30,20);
+    can.scale(2.5,2.5);
+
+    can1.strokeRect(10,10,150,100);
+    can1.scale(3.5,3.5);
+    can1.strokeRect(10,10,80,50);
+    </script> 
+</body>
+</html>
