@@ -1,33 +1,22 @@
 <?php
-function wordReverse($str)
+function caseReverse($str)
 {
-	$i = strlen($str) - 1;
-	$end = $i + 1;
-	$result = "";
-	
-	while($i >= 0)
-	{
-		if($str[$i] == ' ')
-		{
-			$start = $i + 1;
-			while($start != $end)
-				$result = $result . $str[$start++];
-			
-			$result = $result . ' ';
-			
-			$end = $i;
-		}
-		$i--;
+	if($str >= 'a' && $str <= 'z'){  
+		$str = strtoupper($str); 
+
 	}
-	$start = 0;
-	while($start != $end)
-		$result = $result . $str[$start++];
-	
-	return $result;
+	elseif($str >= 'A' && $str <= 'Z'){  
+		$str = strtolower($str);  
+	}  
+
+	echo "after  $str <br>";
 }
 
 
-$str = "hello jatin";
-echo wordReverse($str);
+
+
+$str = "h";
+echo " befor $str <br>";
+echo caseReverse($str);
 
 ?>
