@@ -2,7 +2,7 @@
 <?php
 
 
-function print_month_name($x){
+
      if ($x==1 ){
          echo "Jan";
         }
@@ -46,4 +46,62 @@ function print_month_name($x){
 $x=4;
 print_month_name($x )
 
+?>
+<?php
+
+
+$opt = 3;
+
+switch ($opt) {
+    case 1:
+        echo "Jan";
+        break;
+
+    case 2:
+        echo "Feb";
+        break;
+
+    case 3:
+        echo "March";
+        break;
+
+    case 4:
+        echo "April" ;
+        break;case 1:
+    case 5:
+
+        echo "May" ;
+        break;
+
+    case 6:
+        echo "June" ;
+        break;
+
+    case 7:
+        echo "July" ;
+        break;
+
+    case 8:
+        echo "August" ;
+        break;
+
+    case 9:
+        echo "September" ;
+        break;
+    case 10:
+
+        echo "October" ;
+    break;
+
+    case 11:
+    echo '30 days';
+    break;
+
+    case 12:
+        echo '31 days';
+        break;
+
+    default:
+    echo "not valid month number";
+}
 ?>

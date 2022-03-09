@@ -38,7 +38,7 @@ switch ($opt) {
 
     case 9:
         echo '30 days';
-        break;case 1:
+        break;
     case 10:
 
     echo '31 days';
