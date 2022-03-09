@@ -1,16 +1,27 @@
 <?php
-function color($x){
-     if ($x=="g" or $x=="G"){
-         echo "Green color";
-        }
-     elseif ($x=="w" or $x=="W"){
-         echo "White color";
-        }
-     else {
-         echo "Not a valid color" ;
-        }
-     }
-$x="w";
-color($x)
+$char="w"
+switch($char){
+    case "g":
+        echo "green color";
+        break;
+    
+    case "G":
+        echo "green color";
+        break;
+
+    case "w":
+            echo "white color";
+            break;
+    
+    case "W":
+            echo "white color";
+            break;
+        
+    case"else":
+            echo "not valid color";
+            break;
+
+
+}
 
 ?>
