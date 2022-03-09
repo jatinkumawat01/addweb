@@ -10,5 +10,5 @@ for($i;$i<=$b;$i++){
     }
 
 }
-echo "Total sum of all integers divisible by 7= $sum"
+echo "Total sum of all integers divisible by 7= $sum";
 ?>
