@@ -25,4 +25,3 @@ var x = document.getElementById("contact-map");
             }
          }
 getLocation();
-
