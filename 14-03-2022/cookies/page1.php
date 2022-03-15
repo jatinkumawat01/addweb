@@ -15,7 +15,7 @@ Password: <input name="password" type="password"><br/>
 </body>
 </html>
 <?php
-if(isset($_POST['login'])){
+if($_POST['login']){
     setcookie ("username",$_POST["username"],time()+ 3600);
 	setcookie ("password",$_POST["password"],time()+ 3600);
     header('Location:page2.php');
