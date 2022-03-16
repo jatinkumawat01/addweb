@@ -1,9 +1,11 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
 <!------ Include the above in your HEAD tag ---------->
-
-
 <!--author:starttemplate-->
 <!--reference site : starttemplate.com-->
 <!DOCTYPE html>
@@ -30,16 +32,16 @@
                                 
                             </div>
                             <div class="mn">
-                            <input type="submit" name="submit" class="btn btn-info btn-md" name='submit' value="submit">
+                            <input type="submit" name="submit" class="btn btn-info btn-md" name='submit' value="Login">
                             <?php error_reporting(0); if ($_POST['submit']){ 
                                 if($_POST['email']==$_COOKIE['email'] and $_POST['password']==$_COOKIE['password'])
                                     {
-                                        header('Location:home.php');
+                                        header('Location:home1.php');
                                     }
                                 echo "<script>window.alert('username and password not currect !') </script> ";
                                 } ?>
                                 
-                                <input type="submit" name="register" class="btn btn-info btn-md io" value="register">
+                                <input type="submit" name="register" class="btn btn-info btn-md io" value="Register">
                                 <?php error_reporting(0); if ($_POST['register']){ header('Location:signup.php');} ?>
                             </div>
                            

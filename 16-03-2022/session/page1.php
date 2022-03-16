@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>check cookies</title>
+    <title>check session</title>
 </head>
 <body>
 <form method="post" >
@@ -16,8 +16,10 @@ Password: <input name="password" type="password"><br/>
 </html>
 <?php
 if(isset($_POST['login'])){
-    setcookie ("username",$_POST["username"],time()+ 3600);
-	setcookie ("password",$_POST["password"],time()+ 3600);
+    $a=$_POST['username'];
+	$b=$_POST['password'];
+    session_start();
+    $_SESSION["user"]=$a;
     header('Location:page2.php');
 }
 ?>

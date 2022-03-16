@@ -114,11 +114,11 @@ body {
         </div>
         <div class="form-group">
         	<input type="email" class="form-control" name="email" placeholder="Email" required="required"> 
-            <?php setcookie("email","$_POST['email']",time()+3600);?>
+            <?php error_reporting(0); setcookie("email",$_POST['email'],time()+3600);?>
         </div>
 		<div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-            <?php setcookie("password","$_POST['password']",time()+3600);?>
+            <?php error_reporting(0); setcookie("password",$_POST['password'],time()+3600);?>
         </div>
 		<div class="form-group">
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
@@ -128,7 +128,7 @@ body {
 		</div>
 		<div class="form-group">
             <input type="submit" name='submit' value='Register' class="btn btn-success btn-lg btn-block">
-            <?php error_reporting(0); if ($_POST['submit']){ header('Location:home.php');} ?>
+            <?php error_reporting(0); if ($_POST['submit']){ header('Location:login.php');} ?>
         </div>
     </form>
 	<div class="text-center">Already have an account? <a href="login.php">Sign in</a></div>

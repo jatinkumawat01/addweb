@@ -209,7 +209,7 @@
         <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#contact">CONTACT</a></li>
-        <li><a href="login.php"><Label>LOGIN</Label></a></li>
+        <li><a href="login.php"><Label>LOGOUT</Label></a></li>
       </ul>
     </div>
   </div>
