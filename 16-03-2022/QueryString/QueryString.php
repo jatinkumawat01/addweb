@@ -14,7 +14,7 @@
 </body>
 </html>
 <?php
-if(isset($_GET['Add']))
+if(isset($_GET['Add'])) 
 {
     $a=$_GET['fvalue'];
     $b=$_GET['svalue'];
