@@ -665,7 +665,40 @@ MariaDB [Queries]> select JOB,sum(Salary) from employee group by JOB having sum(
 MariaDB [Queries]> select JOB,count(JOB) from employee group by JOB having count(*)>3;
 Empty set (0.001 sec)
 
-MariaDB [Queries]> 
+
+MariaDB [Queries]> select upper(Ename) from employee; 
++--------------+
+| upper(Ename) |
++--------------+
+| JATIN        |
+| SHASHANK     |
+| KRISHNA      |
+| JINAL        |
+| MADU         |
+| DONIA        |
+| KRRISH       |
+| KARTIK       |
+| AKASH        |
+| MOHIT        |
++--------------+
+10 rows in set (0.001 sec)
+
+MariaDB [Queries]> select lower(Ename) from employee; 
++--------------+
+| lower(Ename) |
++--------------+
+| jatin        |
+| shashank     |
+| krishna      |
+| jinal        |
+| madu         |
+| donia        |
+| krrish       |
+| kartik       |
+| akash        |
+| mohit        |
++--------------+
+10 rows in set (0.001 sec)
 
 
 
