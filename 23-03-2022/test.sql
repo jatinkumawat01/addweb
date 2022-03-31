@@ -692,3 +692,104 @@ MariaDB [Queries]> select JOB,count(JOB) from employee group by JOB having count
 Empty set (0.001 sec)
 
 MariaDB [Queries]> 
+
+
+-- pdf task
+
+
+create table employee1 (id int not null primary key, Ename varchar(50),Eaddress varchar(50), email varchar(50));
+insert into student (id, Ename ,Eaddress ,Emobileno) valuse(1,'jatin','jaipur',9799623173);
+
+
+
+
+
+insert into employee1(id,Ename,Eaddress,email) values (1,'jatin','jaipur','jatin@gmail.com'),
+(2,'akash','jaipur','akash@gmail.com'),
+(3,'krishna','sikar','krishna@gmail.com'),
+(4,'mukul','delhi','mukul@gmail.com'),
+(5,'donia','jaipur','donia@gmail.com');
+
+
+create table official (id int not null primary key, department varchar(50),designation varchar(50), email varchar(50));
+insert into official(id,department,designation,email) values (1,'marketing','HR','jatin@gmail.com'),
+(2,'creater','frontend','akash@gmail.com'),
+(3,'developer','java','krishna@gmail.com'),
+(7,'developer','python','mukul@gmail.com'),
+(8,'manager','system manager','donia@gmail.com');
+
+
+create table salarydetails (email varchar(50) not null, salary bigint,designation varchar(50));
+insert into salarydetails(email,salary,designation) values ('jatin@gmail.com',35000,'HR'),
+('akash@gmail.com',12000,'frontend'),
+('krishna@gmail.com',20000,'java'),
+('mukul@gmail.com',23000,'python'),
+('donia@gmail.com',30000,'system manager');
+
+
+select e.id, e.Ename,o.department,o.designation from employee1 e full join official o on e.id=o.id; 
+
+
+
+create table Supervisor(id int not null primary key, Sname varchar(50), supervisorid int);
+
+
+insert into Supervisor(id, Sname, supervisorid) values
+(1,'jatin',3),
+(2,'amit',3),
+(3,'donia',4),
+(4,'ronak',5);
+
+select s.Sname, s1.Sname from Supervisor s left join Supervisor s1 on s.supervisorid=s1.id union all select s.Sname, s1.Sname from Supervisor s left join Supervisor s1 on s.supervisorid=s1.id;
+
+
+
+create table HR (email varchar(50) not null, salary bigint,deduction int);
+insert into HR(email,salary,deduction) values ('jatin@gmail.com',35000,200),
+('akash@gmail.com',12000,0),
+('krishna@gmail.com',20000,120),
+('mukul@gmail.com',23000,1000),
+('donia@gmail.com',30000,2110);
+
+select id, Ename  from employee1 where id=(select id from official where email='jatin@gmail.com');
+
+
+select id, Ename from employee1 where id in (select id from official where department='developer');
+
+
+select id, Ename from employee1 where id in (select id from official where email in (select email from HR where salary<30000));
+
+
+
+
+
+
+
+select substring('jatin',4);
+
+select dayname(curdate());
+
+select substring(dayname(curdate()),1,2);
+
+select replace('jatin',substring('jatin',4),substring(dayname(curdate()),1,2));
+
+
+select replace(dayname(curdate()), substring(dayname(curdate()),4),substring('jatin',4));
+
+
+
+select Ename from employee where JOB ='saleman' and Salary > (select max(Salary) from employee where JOB ='clerks');
+
+
+
+
+
+
+
+
+
+
+
+
+
+

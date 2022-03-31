@@ -72,7 +72,7 @@ MariaDB [Queries]> select * from employee;
 |       5 | madu     | HR             |   5000 | NUMBER5    | 2021-12-01 |       1000 |          1 |
 |       6 | donia    | clerks         | 320000 | NUMBER20   | 1990-02-04 |       2000 |         32 |
 |       7 | krrish   | drawing        |  32000 | NUMBER10   | 1990-04-03 |          0 |         32 |
-|       8 | kartik   | saleman        |   2500 | NUMBER10   | 2000-04-04 |       3000 |         22 |
+|       8 | kartik   | salesman       |   2500 | NUMBER10   | 2000-04-04 |       3000 |         22 |
 |       9 | akash    | analyst        |   3000 | NUMBER20   | 2010-11-04 |       2000 |         12 |
 |      10 | mohit    | clerks         |   5000 | NUMBER11   | 2021-12-01 |       1000 |          1 |
 +---------+----------+----------------+--------+------------+------------+------------+------------+
@@ -702,8 +702,5 @@ MariaDB [Queries]> select lower(Ename) from employee;
 
 
 
-
-
--- pdf task
 
 
