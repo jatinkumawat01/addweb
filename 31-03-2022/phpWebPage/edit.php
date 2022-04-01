@@ -42,6 +42,7 @@ function myFunction() {
     x.type = "password";
   }
 }
+
 </script>
 </body>
 

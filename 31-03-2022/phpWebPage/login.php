@@ -6,11 +6,11 @@
 </head>
 
 <body>
-    <form name="myform" method="post" onsubmit="return validateform()">
+    <form name="myform" method="post" >
         Email:<input type="text" name='email' /><br />
-        Password:<input type="password" name="password" />
+        Password:<input type="password" name="password" id='pswd'/>
         <input type="checkbox" onclick="myFunction()">Show Password <br><br><br>
-        <input type="submit" name="Login" value="Login" />
+        <input type="submit" name="Login" value="Login" onclick="return validateform()"/>
         <input type='submit' name=SignUp value='SignUp' />
     </form>
     <script>
@@ -26,15 +26,16 @@
             return false;
         }
     }
+
     function myFunction() {
-    var x = document.getElementById("pswd");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
+        var x = document.getElementById("pswd");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
-}
-</script>
+   
     </script>
 </body>
 

@@ -6,42 +6,73 @@
 </head>
 
 <body>
-    <form name="myform" method="post" onsubmit="return validateform()">
-        Name:<input type="text" name="name" /><br />
+    <form name="myform" method="post"  >
+        Name:<input type="text" name="name" required/><br />
         Email:<input type="email" name="Email" /><br />
-        password:<input type="password" name='password' />
+        password:<input type="password" name='password' id='pswd' />
         <input type="checkbox" onclick="myFunction()">Show Password <br>
-        Repeat password:<input type="text" name='Rpassword' /><br />
-        mobile No:<input type="int" name='mobile' /><br />
-        Address:<input type="text" name='address' /><br />
-        <input type="submit" name="SignUp" value="SignUp" />
+        Repeat password:<input type="text" name='Rpassword' id='rpswd'/><br />
+        mobile No:<input type="int" name='mobile' id='mobile'/><br />
+        Address:<input type="text" name='address' required/><br />
+        <input type="submit" name="SignUp" value="SignUp"  onclick="return validateform()"/>
     </form>
 
     <script>
-    function validateform() {
-        var name = document.myform.name.value;
+        
+        function validateform() {
+        var email = document.myform.Email.value;
         var password = document.myform.password.value;
+        var rpassword = document.myform.Rpassword.value;
+        var mobile = document.myform.mobile.value;
 
-        if (name == null || name == "") {
-            alert("Name can't be blank");
+        // var phoneno = /^((\\+91-?)|0)?[0-9]{10}$/;
+        // var checkEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (email == null || email == "") {
+            alert("Email can't be blank");
             return false;
         } else if (password.length < 6) {
             alert("Password must be at least 6 characters long.");
             return false;
         }
+        else if(password != rpassword)
+        {
+            alert("Password and repeat password not match.");
+            return false;
+        }
+        
+        
+
     }
+
+    function myFunction() {
+        var x = document.getElementById("pswd");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    
     </script>
-<style>
+    <style>
     body {
-  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
-  margin:0px;
-  font-family: 'Ubuntu', sans-serif;
-	background-size: 100% 110%;
-}
-h1, h2, h3, h4, h5, h6, a {
-  margin:0; padding:0;
-}
-</style>
+        background: url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+        margin: 0px;
+        font-family: 'Ubuntu', sans-serif;
+        background-size: 100% 110%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
 </body>
 
 </html>
