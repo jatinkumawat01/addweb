@@ -23,7 +23,8 @@ else{
     }
         
     $query=mysqli_query($con,"select * from student12") or die("Error in query");
-    echo "<table border=2><tr><td>name</td><td>mobile</td><td>address</td><td>email</td><td>password</td><td>edit</td><td>delete</td></tr>";
+    echo "<script>$(document).ready(function () { $('#dt-cell-sellection').dataTable({select: {style: 'os',items: 'cell'}});});</script>";
+    echo "<table id='dt-cell-sellection' class='table' cellspacing='0' width='100%'><thead><tr><th>name</th><th>mobile</th><th>address</th><th>email</th><th>password</th><th>edit</th><th>delete</th></tr></thead><tbody>";
 
     while($row=mysqli_fetch_array($query))
     {
@@ -40,7 +41,7 @@ else{
         $sum+=1;
 
     }
-    echo "</table>";
+    echo "</tbody></table>";
     mysqli_close($con);
 }
 echo "<form method='post'><input type='submit' name ='Add' value='Add'/></form>";

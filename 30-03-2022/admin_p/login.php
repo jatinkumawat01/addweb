@@ -35,7 +35,7 @@ if (isset($_POST['Login'])) {
     
     
 $con=mysqli_connect("localhost","root","","batch6") or die("Error in Connection");
-$query=mysqli_query($con,"select  email from student12 where email='$email' and password='$password'") or die("Error in query");
+$query=mysqli_query($con,"select  email from student12 where email='$email'") or die("Error in query");
 
 $rows=mysqli_num_rows($query);
 

@@ -46,7 +46,7 @@ if (isset($_POST['Submit'])) {
 
 $insert=mysqli_query($con,"update student12 set name='$name',address='$address',mobile='$mobile',password='$pswd' where email='$email' ") or die("Error in update query");
 
-header('Location:main.php');
+header('Location:admin.php');
 
 mysqli_close($con);
 

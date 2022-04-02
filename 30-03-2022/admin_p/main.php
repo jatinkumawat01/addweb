@@ -9,7 +9,7 @@ else{
     $email=$_SESSION['email'];
     $password=$_SESSION['password'];
     $con=mysqli_connect("localhost","root","","batch6") or die("Error in Connection");
-    $query=mysqli_query($con,"select name from student12 where email='$email' and password='$password'") or die("Error in query");
+    $query=mysqli_query($con,"select name from student12 where email='$email'") or die("Error in query");
 
     $rows=mysqli_num_rows($query);
     while($row=mysqli_fetch_array($query))
