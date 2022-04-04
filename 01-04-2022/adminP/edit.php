@@ -19,7 +19,7 @@ while($row=mysqli_fetch_array($query))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Edite</title>
 </head>
 <body>
 <div class="padding container d-flex justify-content-center">

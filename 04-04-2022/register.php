@@ -137,7 +137,7 @@ if($_POST['submit']=='Register Now'){
 $con=mysqli_connect("localhost","root","","batch6") or die("Error in Connection");
 $insert=mysqli_query($con,"insert into student12 ( name, address, mobile, email, password) values('$name','$address', $mobile, '$email', '$pswd')") or die("Error in insert query");
 mysqli_close($con);
-header("Location:admin.php");
+header("Location:dasbord.php");
 
 
 }

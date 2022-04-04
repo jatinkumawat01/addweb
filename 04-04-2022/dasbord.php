@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(0);
 session_start();
@@ -40,43 +41,33 @@ else{
         <h3 class="text-center">Hello <?php echo $n ?> </h3><br>       
     </div>
         <table class="p-3 mt-3" >
-            <tr>
-                <td>Name</td>
-                <td>Mobile</td>
-                <td>Address</td>
-                <td>Email</td>
-                <td>Password</td>
-                <td>Edit</td>
-                <td>Delete</td>
+        <tr>
+                <td>Products</td>
+                <td>Add</td>
+                <td>Show</td>
             </tr>
-            <?php
-        error_reporting(0);
-        $con=mysqli_connect("localhost","root","","batch6") or die("Error in Connection");
-        $query=mysqli_query($con,"select * from student12") or die("Error in query");
-    
-    while($row=mysqli_fetch_array($query))
-    {
-        echo "<tr>";
-        echo "<td>".$row["name"]."</td>";
-        echo "<td>".$row["mobile"]."</td>";
-        echo "<td>".$row["address"]."</td>";
-        echo "<td>".$row["email"]."</td>";
-        echo "<td>".$row["password"]."</td>";
-        echo "<td><a href=edit.php?email=".$row['email'].">Edit</a></td>";
-        echo "<td><a href=delete.php?email=".$row['email'].">delete</a></td>";
-
-        echo "</tr>";
-
-    }
-    mysqli_close($con);
-
-        
-        
-        
-        ?>
+            <tr>
+                <td>Shoes</td>
+                <td><a href="shoesAdd.php">Add</a></td>
+                <td><a href="shoesimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <td>Decoration</td>
+                <td><a href="DecorAdd.php">Add</a></td>
+                <td><a href="Decorimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <td>Cloth</td>
+                <td><a href="clothAdd.php">Add</a></td>
+                <td><a href="clothimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <td>electronic</td>
+                <td><a href="eleAdd.php">Add</a></td>
+                <td><a href="eleimg.php">Show</a></td>
+            </tr>
         </table>
         <form class="p-3 mt-3" method='post'>
-        <button class="btn1 mt-3 " name ='Add' value='Add' formmethod="post">Add</button><?php  if($_POST['Add']=='Add'){header("Location:register.php");}?>
         <button class="btn mt-3 " name='logout'  value='Logout' formmethod="post">Logout</button><?php if($_POST['logout']=='Logout' ){ session_destroy();header("Location:login.php");}?>
         </form>
 
@@ -93,7 +84,7 @@ else{
 }
 
 body {
-    background: #ecf0f3
+    background-img
 }
 
 .wrapper {
