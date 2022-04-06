@@ -9,7 +9,7 @@
 <body>
 <div class="wrapper">
     <div class="logo"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2W5LxdR06KeKzv-iG96OS_FanT7opw3Y6w&usqp=CAU" alt=""> </div>
-    <div class="text-center mt-4 name"> dasbord Dashboard Login </div>
+    <div class="text-center mt-4 name">Dashboard Login </div>
     <form class="p-3 mt-3" method='post'>
         <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="email" name="email" id="userName" placeholder="Email Address"> </div>
         <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="Password"> </div> 

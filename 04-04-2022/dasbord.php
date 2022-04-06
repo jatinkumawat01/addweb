@@ -36,35 +36,55 @@ else{
         <div class="logo"> <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2W5LxdR06KeKzv-iG96OS_FanT7opw3Y6w&usqp=CAU" alt="">
         </div>
-        <div class="text-center mt-4 name">Wellcome to Admin Dashboard </div>
+        <div class="text-center mt-4 name">Welcome to Admin Dashboard </div>
         <div class="text-center mt-4 name1">
         <h3 class="text-center">Hello <?php echo $n ?> </h3><br>       
     </div>
         <table class="p-3 mt-3" >
         <tr>
-                <td>Products</td>
-                <td>Add</td>
-                <td>Show</td>
+                <th>Products</th>
+                <th>Add</th>
+                <th>Show</th>
             </tr>
             <tr>
-                <td>Shoes</td>
+                <th>Shoes</th>
                 <td><a href="shoesAdd.php">Add</a></td>
                 <td><a href="shoesimg.php">Show</a></td>
             </tr>
             <tr>
-                <td>Decoration</td>
+                <th>Decoration</th>
                 <td><a href="DecorAdd.php">Add</a></td>
                 <td><a href="Decorimg.php">Show</a></td>
             </tr>
             <tr>
-                <td>Cloth</td>
+                <th>Cloth</th>
                 <td><a href="clothAdd.php">Add</a></td>
                 <td><a href="clothimg.php">Show</a></td>
             </tr>
             <tr>
-                <td>electronic</td>
+                <th>Electronic</th>
                 <td><a href="eleAdd.php">Add</a></td>
                 <td><a href="eleimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <th>T-shirts</th>
+                <td><a href="tshirtAdd.php">Add</a></td>
+                <td><a href="tshirtimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <th>Shirts</th>
+                <td><a href="shirtAdd.php">Add</a></td>
+                <td><a href="shirtimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <th>Jeans</th>
+                <td><a href="jeansAdd.php">Add</a></td>
+                <td><a href="jeansimg.php">Show</a></td>
+            </tr>
+            <tr>
+                <th>Trouser</th>
+                <td><a href="trouserAdd.php">Add</a></td>
+                <td><a href="trouserimg.php">Show</a></td>
             </tr>
         </table>
         <form class="p-3 mt-3" method='post'>

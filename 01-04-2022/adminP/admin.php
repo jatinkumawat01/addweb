@@ -35,7 +35,7 @@ else{
         <div class="logo"> <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2W5LxdR06KeKzv-iG96OS_FanT7opw3Y6w&usqp=CAU" alt="">
         </div>
-        <div class="text-center mt-4 name">Wellcome to Admin Dashboard </div>
+        <div class="text-center mt-4 name">Welcome to Admin Dashboard </div>
         <div class="text-center mt-4 name1">
         <h3 class="text-center">Hello <?php echo $n ?> </h3><br>       
     </div>
