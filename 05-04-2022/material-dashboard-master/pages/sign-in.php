@@ -1,5 +1,6 @@
 <?php
 include('headclear.php');
+session_destroy();
 ?>
 
 <head>
