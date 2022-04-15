@@ -1,76 +1,59 @@
 <?php
 include('head.php');
 ?>
-  <body>
+
+<body>
     <?php include('layout.php');?>
-    <!-- Responsive Table -->
-    <div class="card">
+    <!-- Content wrapper -->
+    <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Client Tables</h4>
+
+            <!-- Responsive Table -->
+            <div class="card">
                 <h5 class="card-header">Product Categories Table</h5>
                 <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr class="text-nowrap">
-                        <th>#</th>
-                        <th>Product Categories</th>
-                        <th>Add</th>
-                        <th>View</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mobile</td>
-                        <td><a href='Padd.php?tname=mobile'>Add</a></td>
-                        <td><a href='Pview.php?tname=mobile'>View</a></td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td><a href='Padd.php?tname=laptop'>Add</a></td>
-                        <td><a href='Pview.php?tname=laptop'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Tv</td>
-                        <td><a href='Padd.php?tname=Tv'>Add</a></td>
-                        <td><a href='Pview.php?tname=Tv'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Shirt</td>
-                        <td><a href='Padd.php?tname=shirt'>Add</a></td>
-                        <td><a href='Pview.php?tname=shirt'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Tshirt</td>
-                        <td><a href='Padd.php?tname=tshirt'>Add</a></td>
-                        <td><a href='Pview.php?tname=tshirt'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">6</th>
-                        <td>Trouser</td>
-                        <td><a href='Padd.php?tname=trouser'>Add</a></td>
-                        <td><a href='Pview.php?tname=trouser'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">7</th>
-                        <td>Shoes</td>
-                        <td><a href='Padd.php?tname=shoes'>Add</a></td>
-                        <td><a href='Pview.php?tname=shoes'>View</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">8</th>
-                        <td>Jeans</td>
-                        <td><a href='Padd.php?tname=jeans'>Add</a></td>
-                        <td><a href='Pview.php?tname=jeans'>View</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <table class="table">
+                        <thead>
+                            <tr class="text-nowrap">
+                                <th>#</th>
+                                <th>Product Categories</th>
+                                <th>Add</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                          $sql="select * from category";
+                          $query=mysqli_query($con,$sql) or die("Error in insert query");
+                          while($row=mysqli_fetch_array($query))
+                              {
+                                  $tid=$row['C_id'];
+                                  $c_name=$row['category_name']; 
+                                  $tname=$row['category_tname'];
+                              
+                      
+                        ?>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td><?php echo $c_name;?></td>
+                                <td><a href='Padd.php?tname=<?php echo $tname;?>'>Add</a></td>
+                                <td><a href='Pview.php?tname=<?php echo $tname;?>'>View</a></td>
+
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
-              </div>
-              <!--/ Responsive Table -->
-              <?php include('footer.php');?>
-  </body>
-</html>  
+            </div>
+        </div>
+    </div>
+    <!--/ Responsive Table -->
+
+
+    <?php include('footer.php');?>
+</body>
+
+</html>
