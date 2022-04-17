@@ -2,57 +2,7 @@
 	<body>
 		<?php include('header.php') ?>
 
-		<!-- SECTION -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- shop -->
-					<?php 
-					try {
-						$pdo = new PDO("mysql:host=localhost;dbname=batch6", "root", "");
-					
-					$sql="select * from category";
-					$q = $pdo->query($sql);
-					$q->setFetchMode(PDO::FETCH_ASSOC);
-					while($row=$q->fetch())
-						{
-							$tid=$row['C_id'];
-							$c_name=$row['category_name']; 
-							$tname=$row['category_tname'];
-							$path=$row['img_path'];
-						
-				
-					?>
-					
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="<?php echo $path;?>" height=200 width=50 alt=""  >
-							</div>
-							<div class="shop-body">
-								<h3><?php echo $c_name;?><br>Collection</h3>
-								<a href="productView.php?tname=<?php echo $tname;?>" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<?php }
-					} 
-					catch (PDOException $e) {
-						die("Could not connect to the database $dbname :" . $e->getMessage());
-					} ?>
-					<!-- /shop -->
-
-					
-					<!-- /shop -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
-
+		
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -60,7 +10,51 @@
 				<!-- row -->
 				<div class="row">
 
-				
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <form method="post">
+  <h3>Categories</h3>
+  <input type="radio"  name="Tv" value=Tv>
+  <label for="Tv"> Tv</label><br>
+  <input type="radio"  name="Categories" value="mobile">
+  <label for="mobile">Mobiles</label><br>
+  <input type="radio"  name="Categories" value="laptop">
+  <label for="laptop"> Laptops</label><br>
+  <input type="radio"  name="Categories" value="shoes">
+  <label for="shoes"> Shoes</label><br>
+  <input type="radio"  name="Categories" value="tshirt">
+  <label for="tshirt"> Tshirt</label><br>
+  <input type="radio"  name="Categories" value="shirt">
+  <label for="shirt"> Shirt</label><br>
+  <input type="radio"  name="Categories" value="trouser">
+  <label for="trouser"> Trouser</label><br>
+  <input type="radio"  name="Categories" value="jeans">
+  <label for="jeans"> Jeans</label><br>
+  
+	  <h3>Price</h3>
+  <input type="radio" id="0-500" name="price_range" value=500>
+  <label for="0-500"> 0-500</label><br>
+  <input type="radio" id="500-1000" name="price_range" value=1000>
+  <label for="500-1000"> 500-1000</label><br>
+  <input type="radio" id="1000-5000" name="price_range" value=5000>
+  <label for="1000-5000"> 1000-5000</label><br><br>
+  <input type="radio" id="5000-15000" name="price_range" value=15000>
+  <label for="5000-15000"> 5000-15000</label><br><br>
+  <input type="radio" id="15000-50000" name="price_range" value=50000>
+  <label for="15000-50000"> 15000-50000</label><br><br>
+  <input type="radio" id="50000<" name="price_range" value="above">
+  <label for="50000<"> above 50k</label><br><br>
+
+ 
+  <input type="submit" name="submit" value="Apply">
+
+  </form>
+	
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Filter</button>  
+  </div>			
 
 					<!-- Products tab & slick -->
 					<div class="col-md-12">
@@ -95,7 +89,7 @@
 									
 										?>
 
-										<div class="col-md-4 col-xs-6">
+										<div class="col-md-3 col-xs-8">
 										<div class="product">
 											<div class="product-img">
 											<a href="productView.php?tname=<?php echo $tname2;?>"><img src="<?php echo $path1;?>" height=250 width=270 style='padding: 20px 20px 20px 20px; ' alt=""></a>
@@ -143,6 +137,58 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
+
+		<!-- SECTION -->
+		<div class="section" >
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- shop -->
+					<?php 
+					try {
+						$pdo = new PDO("mysql:host=localhost;dbname=batch6", "root", "");
+					
+					$sql="select * from category";
+					$q = $pdo->query($sql);
+					$q->setFetchMode(PDO::FETCH_ASSOC);
+					while($row=$q->fetch())
+						{
+							$tid=$row['C_id'];
+							$c_name=$row['category_name']; 
+							$tname=$row['category_tname'];
+							$path=$row['img_path'];
+						
+				
+					?>
+					
+					<div class="col-md-3 col-xs-8">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="<?php echo $path;?>" height=200 width=50 alt=""  >
+							</div>
+							<div class="shop-body">
+								<h3><?php echo $c_name;?><br>Collection</h3>
+								<a href="productView.php?tname=<?php echo $tname;?>" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<?php }
+					} 
+					catch (PDOException $e) {
+						die("Could not connect to the database $dbname :" . $e->getMessage());
+					} ?>
+					<!-- /shop -->
+
+					
+					<!-- /shop -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
 
 		<!-- HOT DEAL SECTION -->
 		<div id="hot-deal" class="section">
@@ -677,3 +723,17 @@
 
 	</body>
 </html>
+
+<?php
+	if(isset($_POST['ATC'])){
+		//header("Location:ATC.php?");
+	}
+
+	if(isset($_POST['submit'])){
+		$checkP=$_POST['price_range'];
+		$Categories=$_POST['Categories']; 
+		header("Location:productView.php?tname=$Categories&checkp=$checkP");
+		echo "price range= $checkP and Categories= $Categories";
+	}
+
+?>

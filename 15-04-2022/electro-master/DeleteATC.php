@@ -3,20 +3,20 @@ error_reporting(0);
 ob_start();
 include("db.php");
 $id=$_REQUEST['id'];
-$pname=$_REQUEST["tname"];
+$pname=$_REQUEST["Pname"];
 
 
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=batch6", "root", "");
 
-    $sql = "delete from wishList where ProductId=:ProductId and ProductName=:ProductName";
+    $sql = "delete from AddToCart where AddToCartId=:AddToCartId and ProductName=:ProductName";
 	$query = $pdo -> prepare($sql);
-	$query -> bindParam(':ProductId', $id, PDO::PARAM_STR);
+	$query -> bindParam(':AddToCartId', $id, PDO::PARAM_STR);
 	$query -> bindParam(':ProductName', $pname, PDO::PARAM_STR);
     $query -> execute();
 	$lastInsertId=$pdo->lastInsertId();
 	if($lastInsertId!=""){
-   header("Location:wishlist.php");
+   header("Location:Addtocart.php");
 }
     else
 	{

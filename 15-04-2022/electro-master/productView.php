@@ -6,13 +6,44 @@ error_reporting(0);
 session_start();  
 
 $tname=$_REQUEST['tname'];
-$Id=$_REQUEST['id'];
+$checkP=$_REQUEST['checkp'];
+if ($checkP==500){
+	$start=0;
+	$sql = "SELECT * FROM $tname where price between 0 and 500";
+}
+else if($checkP==1000){
+	$start=500;
+	$sql = "SELECT * FROM $tname where price between 500 and 1000";
+}
+else if($checkP==5000){
+	$start=1000;
+	$sql = "SELECT * FROM $tname where price between 1000 and 5000";
+}
+else if($checkP==15000){
+	$start=5000;
+	$sql = "SELECT * FROM $tname where price between 5000 and 15000";
+}
+else if($checkP==50000){
+	$start=15000;
+	$sql = "SELECT * FROM $tname where price between 15000 and 50000";
+}
+else if($checkP=="above"){
+	$start=50000;
+	$checkP==500000;
+	$sql = "SELECT * FROM $tname where price between 50000 and 500000";
+}
+else{
+	$sql = "SELECT * FROM $tname";
+
+}
+
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=batch6", "root", "");
-	$sql = "SELECT * FROM $tname";
-	$q = $pdo->query($sql);
-    $q->setFetchMode(PDO::FETCH_ASSOC);
-		
+	//$sql = "SELECT * FROM $tname where between :start1 and :checkP";
+	
+		$q = $pdo->query($sql);
+		$q->setFetchMode(PDO::FETCH_ASSOC);
+	
         include("head.php"); 
         ?>
 	<body>
@@ -20,20 +51,9 @@ try {
 	<?php include("header.php"); 
 	
 	?>
-<div class="col-md-3 clearfix">
-		<div class="header-ctn">
-			<!-- Wishlist -->
-			<div>
-			<button class="btn btn-info btn-lg" onclick=filter() >
-          <span class="glyphicon glyphicon-filter"></span> Filter 
-</button>
-<div class="filter">
 
-</div>
-			</div>
 
-		</div>
-</div>
+
     
 		<!-- SECTION -->
 		<div class="section">
@@ -41,30 +61,33 @@ try {
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-				
-					<!-- section title -->
-					<!-- <div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">New Products</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab2">Tv</a></li>
-									<li><a data-toggle="tab" href="#tab3">Shoes</a></li>
-									<li><a data-toggle="tab" href="#tab4">Laptop</a></li>
-									<li><a data-toggle="tab" href="#tab5">T-Shirt</a></li>
-									<li><a data-toggle="tab" href="#tab6">Shirt</a></li>
-									<li><a data-toggle="tab" href="#tab7">Trouser</a></li>
-									<li><a data-toggle="tab" href="#tab8">Jeans</a></li>
-									
-								</ul>
-							</div>
-						</div>
-					</div> -->
-					<!-- /section title -->
+				<div id="mySidebar" class="sidebar">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<form method="post">	
+				<h3>Price</h3>
+				<input type="radio" id="0-500" name="price_range" value=500>
+				<label for="0-500"> 0-500</label><br>
+				<input type="radio" id="500-1000" name="price_range" value=1000>
+				<label for="500-1000"> 500-1000</label><br>
+				<input type="radio" id="1000-5000" name="price_range" value=5000>
+				<label for="1000-5000"> 1000-5000</label><br><br>
+				<input type="radio" id="5000-15000" name="price_range" value=15000>
+				<label for="5000-15000"> 5000-15000</label><br><br>
+				<input type="radio" id="15000-50000" name="price_range" value=50000>
+				<label for="15000-50000"> 15000-50000</label><br><br>
+				<input type="radio" id="50000<" name="price_range" value="above">
+				<label for="50000<"> above 50k</label><br><br>
 
-					<!-- Products tab & slick -->
+				
+				<input type="submit" name="submit" value="Apply">
+
+				</form>
+					
+				</div>
+
+				<div id="main">
+				<button class="openbtn" onclick="openNav()">☰ Filter</button>  
+				</div>					
 					<div class="col-md-12">
 						<div class="row">
 							<div class="products-tabs">
@@ -97,7 +120,7 @@ try {
 											</div>
 											<div class="product-body">
 												<p class="product-category"><?php echo $tname; ?></p>
-												<h3 class="product-name"><a href="view.php?tname=<?php echo $tname;?>"><?php echo $name; ?></a></h3>
+												<h3 class="product-name"><a href="view.php?tname=<?php echo $tname;?>&id=<?php echo $id;?>"><?php echo $name; ?></a></h3>
 												<h4 class="product-price">₹ <?php echo $price; ?> <del class="product-old-price">₹ <?php echo $price; ?></del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -136,24 +159,20 @@ try {
         
 
 <?php include('last.php'); ?>
-<script>
-	function filter(){
-	$.ajax({
-		url: "filter.php",
-		type: "POST",
-		cache: false,
-		success: function(data){
-			
-			$('filter').html(data); 
-		}
-	});}
-</script>
+
 	</body>
 </html>
-
 <?php
 	if(isset($_POST['ATC'])){
 		//header("Location:ATC.php?");
 	}
 
+	if(isset($_POST['submit'])){
+		$checkP=$_POST['price_range'];
+		$Categories=$_POST['Categories']; 
+		header("Location:productView.php?tname=$tname&checkp=$checkP");
+		//echo "price range= $checkP and Categories= $Categories";
+	}
+
 ?>
+

@@ -146,6 +146,7 @@ include("db.php");
 		</nav>
 		<!-- /NAVIGATION -->
 
+
 		<?php
 if ($_POST['search']=="Search"){
 	$op=$_POST['select'];
@@ -183,8 +184,8 @@ if ($_POST['search']=="Search"){
 			$tid=$row['C_id'];
 			$c_name=$row['category_name']; 
 			$tname2=$row['category_tname'];
-
-			$SQL1="select * from $tname2 where isActive=1 and ImgId=1";
+			header("Location:productView.php?tname=$tname2");
+			$SQL1="select * from $tname2 where isActive=1 ";
 			$q1 = $pdo->query($SQL1);
 			$q1->setFetchMode(PDO::FETCH_ASSOC);
 			while($row1=$q1->fetch())
@@ -247,3 +248,17 @@ if ($_POST['search']=="Search"){
 		<!-- /SECTION -->
 
 <?php } ?>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+

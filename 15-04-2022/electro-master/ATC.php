@@ -34,7 +34,7 @@ try {
 	if($lastInsertId!="")
 		{
 		echo "Data Inserted Successfully";
-		header("Location:productView.php?tname=$tname");
+		header("Location:view.php?tname=$tname&id=$Id");
 		}
 	else
 		{
