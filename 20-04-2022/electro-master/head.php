@@ -1,6 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +34,49 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .faq{
+    margin-bottom: 30px;
+  }
+  .FAQh{
+    background-color: #eee0;
+  color: #4440;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  }
+.accordion {
+  background-color: #eee0;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+
+  margin-bottom: 26px;
+
+  margin-top:20px;
+}
 
 
 .sidebar {
@@ -45,7 +86,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #fefefe;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;

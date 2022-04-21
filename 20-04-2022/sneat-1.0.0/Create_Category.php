@@ -1,3 +1,4 @@
+
 <?php
 include('head.php');
 ?>
@@ -88,15 +89,18 @@ include('head.php');
 if(isset($_POST['submit'])){
 $c_name=$_POST['title'];
 $tname1=$_POST['tname'];
+
 $path = "images/$tname1";
 $path1 = "../../electro-master/images/$tname1";
 mkdir($path, 0777, true);
 mkdir($path1, 0777, true);
+
 chmod("images", 0777);
 chmod("images/$tname1", 0777);
-chomd("../../electro-master/images",0777);
-chomd("../../electro-master/images/$tname",0777);
+// chomd("../../electro-master/images",0777);
+// chomd("../../electro-master/images/$tname",0777);
 copy($path, $fpath1);
+echo $tname1;
 
 
 
@@ -109,7 +113,7 @@ $filepath = "images/$tname1/" . $_FILES["file"]["name"];
     
 if($query) 
 {
-    $sql1="CREATE TABLE $tname1 (ImgId int(11) NOT NULL PRIMARY KEY,img_path varchar(200) NOT NULL,`name` text NOT NULL,brand text NOT NULL,size text NOT NULL, color text NOT NULL, detail text NOT NULL, price double(12,2) NOT NULL, isActive int(11) NOT NULL) ";
+    $sql1="CREATE TABLE $tname1 (ImgId int(11) NOT NULL  PRIMARY KEY AUTO_INCREMENT,img_path varchar(200) NOT NULL,`name` text NOT NULL,brand text NOT NULL,size text NOT NULL, color text NOT NULL, detail text NOT NULL, price double(12,2) NOT NULL, isActive int(11) NOT NULL) ";
     echo $sql1;
     $query1=mysqli_query($con,$sql1) or die("Error in create query");
     if($query1){

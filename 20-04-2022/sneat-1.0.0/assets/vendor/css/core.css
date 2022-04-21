@@ -196,6 +196,7 @@ blockquote {
 b,
 strong {
   font-weight: 900;
+  font-size: 27px;
 }
 
 small, .small {
@@ -3838,12 +3839,15 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   min-width: 0;
+
+
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 0 solid #d9dee3;
   border-radius: 0.5rem;
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -5776,6 +5780,7 @@ textarea.form-control-lg {
 b,
 strong {
   font-weight: 700;
+  font-size: 27px;
 }
 
 a:not([href]) {
@@ -8348,6 +8353,7 @@ button.list-group-item-gray.active {
 .card {
   background-clip: padding-box;
   box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+  
 }
 .card .card-link {
   display: inline-block;

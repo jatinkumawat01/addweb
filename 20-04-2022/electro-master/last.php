@@ -20,18 +20,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">Categories</h3>
-								<ul class="footer-links">
-									<li><a href="#">Hot deals</a></li>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Cameras</a></li>
-									<li><a href="#">Accessories</a></li>
-								</ul>
-							</div>
-						</div>
+						
 
 						<div class="clearfix visible-xs"></div>
 
@@ -43,7 +32,7 @@
 									<li><a href="#">Contact Us</a></li>
 									<li><a href="#">Privacy Policy</a></li>
 									<li><a href="#">Orders and Returns</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="terms.php">Terms & Conditions</a></li>
 								</ul>
 							</div>
 						</div>
@@ -53,9 +42,10 @@
 								<h3 class="footer-title">Service</h3>
 								<ul class="footer-links">
 									<li><a href="#">My Account</a></li>
-									<li><a href="#">View Cart</a></li>
-									<li><a href="#">Wishlist</a></li>
-									<li><a href="#">Track My Order</a></li>
+									<li><a href="ropdown">
+									<a href="Addtocart.php">View Cart</a></li>
+									<li><a href="wishlist.php">Wishlist</a></li>
+									<li><a href="FAQ.php">FAQ</a></li>
 									<li><a href="#">Help</a></li>
 								</ul>
 							</div>
