@@ -60,7 +60,7 @@ if (isset($_POST['reset'])) {
             $lastInsertId = $pdo->lastInsertId();
             if ($lastInsertId != "") {
                 echo "Data Update Successfully";
-                //header("Location:login.php");
+                header("Location:login.php");
             } else {
                 echo "Error in Updateing";
             }

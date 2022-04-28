@@ -42,7 +42,8 @@ if (!$mail->Send()) {
 
 // <!-- header("Location:forgetPassword.php?OTP=$OTP"); -->
 try{
-$sql="update Customer set OPT =:OTP where email=:email)";
+    echo $OTP;
+$sql="update Customer set OTP =:OTP where email=:email";
 $query = $pdo->prepare($sql);
 $query->bindParam(':email', $email, PDO::PARAM_STR);
 $query->bindParam(':OTP', $OTP, PDO::PARAM_STR);
@@ -50,7 +51,9 @@ $query->execute();
 $lastInsertId = $pdo->lastInsertId();
 if ($lastInsertId != "") {
     echo "Data inserted Successfully";
-    //header("Location:verify.php?email=$email");
+
+
+header("Location:verify.php?email=$email");
 } else {
     echo "Error in inserting";
 }

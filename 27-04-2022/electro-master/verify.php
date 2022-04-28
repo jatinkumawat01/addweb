@@ -40,7 +40,7 @@ include("head.php");
 <?php
 try{
     include("db.php");
-    $sql="select OTP from Customer where email=$email";
+    $sql="select OTP from Customer where email='$email'";
     $q = $pdo->query($sql);
 					
     $q->setFetchMode(PDO::FETCH_ASSOC);
@@ -59,6 +59,9 @@ try{
 
 if (isset($_POST['generate'])) {
     $userOtp = $_POST['UserOTP'];
+
+
+    echo "userOtp= $userOtp    OTP=$OTP";
     if ($userOtp == $OTP) {
         header("Location:ResetPassword.php?email=$email");
     }
