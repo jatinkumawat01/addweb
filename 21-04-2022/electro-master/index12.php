@@ -74,7 +74,7 @@
             <div class="row">
 
                 <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                  
                     <form method="post" style="padding-left:40px">
                         <h3>Categories</h3>
                         <?php
@@ -118,9 +118,9 @@ while($row3=$q->fetch())
 
                 </div>
 
-                <!-- <div id="main">
-                    <button class="openbtn" onclick="openNav()">☰ Filter</button>
-                </div> -->
+                 <div id="main">
+                    <!-- <button class="openbtn" onclick="openNav()">☰ Filter</button> -->
+                </div> 
 
                 <!-- Products tab & slick -->
                 <div class="col-md-12">

@@ -45,7 +45,6 @@
 									<li><a href="ropdown">
 									<a href="Addtocart.php">View Cart</a></li>
 									<li><a href="wishlist.php">Wishlist</a></li>
-									<li><a href="FAQ.php">FAQ</a></li>
 									<li><a href="#">Help</a></li>
 								</ul>
 							</div>

@@ -1,5 +1,3 @@
-
-
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,6 +60,7 @@
   font-size: 15px;
   transition: 0.4s;
 }
+
 
 .active, .accordion:hover {
   background-color: #ccc; 

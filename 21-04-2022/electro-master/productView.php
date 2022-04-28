@@ -66,7 +66,7 @@ try {
             <!-- row -->
             <div class="row">
                 <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          
                     <form method="post">
                         <h3>Price</h3>
                         <input type="radio" id="0-500" name="price_range" value=500>
@@ -104,7 +104,7 @@ try {
                 </div>
 
                 <div id="main">
-                    <button class="openbtn" onclick="openNav()">☰ Filter</button>
+                  
                 </div>
                 <div class="col-md-12">
                     <div class="row">

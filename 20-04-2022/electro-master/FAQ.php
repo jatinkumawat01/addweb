@@ -12,6 +12,7 @@
             <div class="row">
                 <div class="faq">
                     <h2>Frequently Asked Questions</h2><br>
+                   
 
                     <div>
 

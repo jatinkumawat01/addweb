@@ -1,3 +1,4 @@
+
 <?php ob_start();
 error_reporting(0);
 session_start();
@@ -293,6 +294,7 @@ if($rows>0){
 	
     session_start();
     $_SESSION["email"]=$email;
+    
     header('Location:index12.php');
 
 }

@@ -23,6 +23,7 @@ include("db.php");
 						
 						
 						session_start();
+						
 						if(!isset($_SESSION['email']))
 						{
 						?>
@@ -326,5 +327,7 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+
+<h3 ><?php echo $_SESSION['email']; ?></h3>
    
 
