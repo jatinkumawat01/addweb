@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c85fbb3b21f0aef0f1600473a7f4da2189279257',
+        'reference' => '5f06057b365ecdf87b1242ebfaf1a66ae587e044',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -460,6 +460,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/entity_reference_revisions' => array(
+            'pretty_version' => '1.9.0',
+            'version' => '1.9.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_reference_revisions',
+            'aliases' => array(),
+            'reference' => '8.x-1.9',
+            'dev_requirement' => false,
+        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -604,6 +613,15 @@
             'reference' => '2.0.1-rc2',
             'dev_requirement' => false,
         ),
+        'drupal/mailsystem' => array(
+            'pretty_version' => '4.3.0',
+            'version' => '4.3.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/mailsystem',
+            'aliases' => array(),
+            'reference' => '8.x-4.3',
+            'dev_requirement' => false,
+        ),
         'drupal/media' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -652,6 +670,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/mimemail' => array(
+            'pretty_version' => '1.0.0-alpha4',
+            'version' => '1.0.0.0-alpha4',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/mimemail',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-alpha4',
+            'dev_requirement' => false,
+        ),
         'drupal/minimal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -682,6 +709,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/paragraphs' => array(
+            'pretty_version' => '1.14.0',
+            'version' => '1.14.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/paragraphs',
+            'aliases' => array(),
+            'reference' => '8.x-1.14',
+            'dev_requirement' => false,
+        ),
         'drupal/path' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -703,6 +739,15 @@
             'reference' => '8.x-1.10',
             'dev_requirement' => false,
         ),
+        'drupal/phpmailer_smtp' => array(
+            'pretty_version' => '2.1.0-beta1',
+            'version' => '2.1.0.0-beta1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/phpmailer_smtp',
+            'aliases' => array(),
+            'reference' => '2.1.0-beta1',
+            'dev_requirement' => false,
+        ),
         'drupal/quickedit' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -721,7 +766,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c85fbb3b21f0aef0f1600473a7f4da2189279257',
+            'reference' => '5f06057b365ecdf87b1242ebfaf1a66ae587e044',
             'dev_requirement' => false,
         ),
         'drupal/registration_role' => array(
@@ -1064,6 +1109,15 @@
             'install_path' => __DIR__ . '/../pear/pear_exception',
             'aliases' => array(),
             'reference' => 'b14fbe2ddb0b9f94f5b24cf08783d599f776fff0',
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.6.0',
+            'version' => '6.6.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'reference' => 'e43bac82edc26ca04b36143a48bde1c051cfd5b1',
             'dev_requirement' => false,
         ),
         'psr/cache' => array(

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c85fbb3b21f0aef0f1600473a7f4da2189279257',
+        'reference' => '5f06057b365ecdf87b1242ebfaf1a66ae587e044',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -550,6 +550,15 @@
                 0 => '9.3.12',
             ),
         ),
+        'drupal/entity_reference_revisions' => array(
+            'pretty_version' => '1.9.0',
+            'version' => '1.9.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/entity_reference_revisions',
+            'aliases' => array(),
+            'reference' => '8.x-1.9',
+            'dev_requirement' => false,
+        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -661,7 +670,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c85fbb3b21f0aef0f1600473a7f4da2189279257',
+            'reference' => '5f06057b365ecdf87b1242ebfaf1a66ae587e044',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -753,6 +762,15 @@
             'replaced' => array(
                 0 => '9.3.12',
             ),
+        ),
+        'drupal/paragraphs' => array(
+            'pretty_version' => '1.14.0',
+            'version' => '1.14.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/paragraphs',
+            'aliases' => array(),
+            'reference' => '8.x-1.14',
+            'dev_requirement' => false,
         ),
         'drupal/path' => array(
             'dev_requirement' => false,
